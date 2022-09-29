@@ -1,0 +1,290 @@
+* {
+  /*reset CSS*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  /*primary colors*/
+
+  /*blue chill*/
+  --blue: #49a29a;
+  /*Astral*/
+  --blue-light: #336680;
+  /*Nordic*/
+  --green: #0c343c;
+  /*Jungle Mist*/
+  --hover: #abc6c7;
+
+  /*secondary colors*/
+
+  /*black*/
+  --headline: #22262a;
+  /*Matterhorn*/
+  --paragraph: #545454;
+
+  --white: #ffffff;
+}
+
+/*fonts*/
+body {
+  color: var(--paragraph);
+  font-family: 'Fira Code', monospace;
+}
+
+div.m-contato-rapido h4,
+div.m-navegacao a {
+  font-weight: 400;
+  margin: 10px 0;
+  color: var(--green);
+}
+
+div.m-navegacao a {
+  margin: 0;
+  padding: 20px;
+  color: var(--paragraph);
+}
+
+div.banner-texto h1.banner-texto-titulo {
+  margin-bottom: 20px;
+
+  color: var(--white);
+  font-size: 46px;
+  line-height: 54px;
+  font-weight: 600;
+}
+
+div.banner-texto h2.banner-texto-subtitulo {
+  display: block;
+  margin-bottom: 40px;
+  opacity: 0.7;
+
+  color: var(--white);
+  font-size: 30px;
+  line-height: 20px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+button.banner-texto-botao a.botao-texto {
+  color: var(--green);
+  font-size: 28px;
+  line-height: 20px;
+}
+
+div.agendar-wrapper h3.agendar-title {
+  color: var(--white);
+  font-size: 36px;
+  line-height: 40px;
+
+  margin: 10px 40px 10px 0;
+}
+
+div.agendar-wrapper a.agendar-button {
+  font-size: 26px;
+  color: var(--green);
+  font-weight: 400;
+}
+
+section#inicio div.inicio-texto h3 {
+  color: var(--green);
+  font-size: 28px;
+
+  margin-block: 20px;
+}
+
+section#exames div.exames-titulo h2 {
+  color: var(--green);
+  font-size: 36px;
+
+  text-transform: uppercase;
+}
+
+/*Primeiro Menu*/
+div.m-contato-rapido-wrapper {
+  border-bottom: 1px solid;
+  border-color: #1f7c92;
+}
+div.m-contato-rapido {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  padding: 10px 0 10px 0;
+  margin: 0 10px 0 10px;
+
+  background-color: var(--white);
+}
+
+a.contato-rapido-whatsapp-link {
+  margin-right: 20px;
+}
+
+div.m-contato-rapido svg,
+div.contato-rapido-ligar svg {
+  width: 25px;
+  height: 25px;
+  margin: 10px 5px 10px 0;
+
+  fill: var(--green);
+}
+
+a.contato-rapido-whatsapp-link,
+a.contato-rapido-ligar-link {
+  display: flex;
+  flex-direction: row;
+}
+
+/*Segundo Menu*/
+div.m-navegacao {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin: 25px 20px;
+}
+
+.navegacao-sessoes {
+  display: flex;
+}
+
+/*Banner*/
+
+div.banner {
+  background-image: url(/assets/IMAGENS/opção1-original.png);
+
+  background-size: cover, cover;
+  background-attachment: fixed, fixed;
+  background-position: 50% 50%, 50% 50%;
+  background-repeat: repeat, no-repeat;
+
+  display: flex;
+  width: auto;
+  height: 500px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  align-items: center;
+}
+
+div.banner-texto {
+  margin: 0 0 0 80px;
+
+  display: flex;
+  flex-flow: column wrap;
+  flex-shrink: 1;
+}
+
+button.banner-texto-botao {
+  width: 300px;
+  height: 50px;
+  padding: 15px 20px;
+
+  background-color: var(--white);
+  border: 0px;
+  border-radius: 5px;
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+  flex-shrink: 1;
+}
+
+/*call to action*/
+
+main article.agendar {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 100px;
+
+  display: flex;
+  justify-content: center;
+}
+
+article.agendar div.agendar-wrapper {
+  padding: 30px 140px;
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+
+  background-image: linear-gradient(330deg, #197388 21%, #1f849c 67%, #0d9dbb);
+}
+
+div.agendar-wrapper a.agendar-button {
+  display: block;
+
+  padding: 10px 40px;
+  background-color: var(--white);
+  border-radius: 5px;
+}
+
+/*Inicio*/
+
+main section#inicio {
+  display: flex;
+  flex-flow: row wrap-reverse;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 60px;
+}
+
+section#inicio div.inicio-texto {
+  max-width: 450px;
+
+  padding: 20px;
+  margin-right: 20px;
+}
+
+section#inicio img {
+  border-radius: 15px;
+}
+
+/*EXAMES*/
+
+section#exames {
+
+  display: flex;
+  flex-flow: column wrap;
+
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+section#exames div.exames-titulo-wrapper {
+  max-width: 2200px;
+  height: 60px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+
+}
+
+div.exames-titulo-wrapper div.exames-titulo {
+  display: flex;
+  align-items: center;
+}
+
+section#exames div.exames-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+
+  margin-block: 40px 20px;
+  padding-inline: 60px;
+
+  
+}
+
+section#exames div.exames-card  img{
+  box-shadow: 1px 2px 6px 0 var(--hover);
+}
+
+section#exames div.card-spacing {
+  margin-right: 60px;
+}
+
