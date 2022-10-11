@@ -29,6 +29,7 @@
 }
 
 /*fonts*/
+/*converter tudo pra rem*/
 body {
   color: var(--paragraph);
   font-family: 'Fira Code', monospace;
@@ -78,8 +79,6 @@ div.agendar-wrapper h3.agendar-title {
   color: var(--white);
   font-size: 36px;
   line-height: 40px;
-
-  margin: 10px 40px 10px 0;
 }
 
 div.agendar-wrapper a.agendar-button {
@@ -121,7 +120,7 @@ a.contato-rapido-whatsapp-link {
   margin-right: 20px;
 }
 
-div.m-contato-rapido svg,
+div.contato-rapido-whatsapp svg,
 div.contato-rapido-ligar svg {
   width: 25px;
   height: 25px;
@@ -136,6 +135,31 @@ a.contato-rapido-ligar-link {
   flex-direction: row;
 }
 
+div.convenio-container div.subtitle-wrapper h4 {
+  font-family: 'Fira Code', monospace;
+  font-size: 26px;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 34px;
+  color: var(--white);
+}
+
+section#convenio div.convenio-container p {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 300;
+  text-align: center;
+  color: var(--white);
+}
+
+section#convenio div.convenio-container a p {
+  background-color: var(--white);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: var(--green);
+}
+
 /*Segundo Menu*/
 div.m-navegacao {
   display: flex;
@@ -147,6 +171,16 @@ div.m-navegacao {
 
 .navegacao-sessoes {
   display: flex;
+}
+
+@media screen and (max-width: 1090px) {
+  .navegacao-sessoes {
+    display: none;
+  }
+
+  div.m-navegacao {
+    justify-content: center;
+  }
 }
 
 /*Banner*/
@@ -185,6 +219,9 @@ button.banner-texto-botao {
   border-radius: 5px;
 }
 
+/*global*/
+
+header,
 main {
   display: flex;
   flex-flow: column;
@@ -194,9 +231,11 @@ main {
 /*call to action*/
 
 main article.agendar {
+  max-width: 90%;
   width: 100%;
   height: 120px;
-  margin-bottom: 100px;
+
+  margin: 0 auto 100px auto;
 
   display: flex;
   justify-content: center;
@@ -208,6 +247,7 @@ article.agendar div.agendar-wrapper {
 
   display: flex;
   align-items: center;
+  gap: 40px;
 
   background-image: linear-gradient(330deg, #197388 21%, #1f849c 67%, #0d9dbb);
 }
@@ -218,6 +258,19 @@ div.agendar-wrapper a.agendar-button {
   padding: 10px 40px;
   background-color: var(--white);
   border-radius: 5px;
+}
+
+@media screen and (max-width: 1090px) {
+  main article.agendar {
+    height: 270px;
+    align-items: center;
+    text-align: center;
+  }
+  article.agendar div.agendar-wrapper {
+    flex-direction: column;
+    padding: 40px;
+    gap: 10px;
+  }
 }
 
 /*Inicio*/
@@ -240,12 +293,12 @@ section#inicio div.inicio-texto {
 
 section#inicio img {
   border-radius: 15px;
+  max-width: 90%;
 }
 
 /*EXAMES*/
 
 section#exames {
-
   display: flex;
   flex-flow: column wrap;
 
@@ -254,13 +307,17 @@ section#exames {
 }
 
 section#exames div.exames-titulo-wrapper {
+  width: 100%;
   max-width: 2200px;
   height: 60px;
 
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+  gap: 15px;
 }
 
 div.exames-titulo-wrapper div.exames-titulo {
@@ -268,23 +325,185 @@ div.exames-titulo-wrapper div.exames-titulo {
   align-items: center;
 }
 
+div.exames-titulo-wrapper .reta {
+  height: 5px;
+  width: 40%;
+  background-color: var(--green);
+}
 section#exames div.exames-wrapper {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-evenly;
-
+  gap: 60px;
   margin-block: 40px 20px;
   padding-inline: 60px;
-
-  
 }
 
-section#exames div.exames-card  img{
+section#exames div.exames-card img {
   box-shadow: 1px 2px 6px 0 var(--hover);
 }
 
-section#exames div.card-spacing {
-  margin-right: 60px;
+section#exames footer.agendar {
+  width: 100%;
+  margin-bottom: 60px;
 }
 
+footer.agendar div.agendar-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 30px 140px;
+
+  gap: 40px;
+
+  background-color: rgb(31, 124, 146);
+  background-image: linear-gradient(
+      6deg,
+      rgba(25, 115, 136, 0.22) 21%,
+      rgba(31, 133, 156, 0.94) 67%,
+      rgba(13, 157, 187, 0.33)
+    ),
+    url(../IMAGENS/opção1-original.png);
+    background-size: auto, cover;
+    background-attachment: scroll, fixed;
+    background-position: 0px 0px, 50% 50%;j
+}
+
+/*Convênios*/
+
+section#convenio {
+  margin-bottom: 60px;
+}
+
+
+/*fazer uma media querie*/
+section#convenio div.convenio-container {
+  width: 940px;
+  max-width: 80%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 40px 60px;
+
+  background-color: var(--blue);
+  background-image: linear-gradient(3deg, #1f7c92, #1e8097 50%, #0991ad 96%);
+   
+  /*refazer*/
+  /*background-image: linear-gradient(3deg, var(--blue-light), var(--blue-light) 50%, var(--blue-light) 96%);*/
+
+  display: flex;
+  flex-flow: column nowrap;
+
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+div.convenio-container div.convenio-title-container {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: nowrap;
+  
+  justify-content: center;
+  align-items: center;
+}
+
+div.convenio-title-container div.bar-wrapper {
+  display: flex;
+  width: 20%;
+
+  justify-content: center;
+  align-items: center;
+
+}
+
+div.bar-wrapper div.bar {
+  height: 1px;
+  width: 100%;
+  background-color: var(--white);
+}
+
+div.convenio-title-container div.title-wrapper {
+  width: 60%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+div.convenio-title-container h3 {
+  font-family: 'Fira Code', monospace;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 44px;
+  color: var(--white);
+
+}
+
+div.convenio-container div.subtitle-wrapper {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/*CONTATO*/
+
+address#contato {
+  padding-inline: 5%;
+  background-color: var(--hover);
+
+  display: flex;
+  flex-flow: column nowrap;
+
+  margin-bottom: 20px;
+  margin
+}
+
+address#contato div.contato-wrapper {
+  padding-block: 20px;
+  
+  display: flex;
+  flex-direction: row wrap;
+  align-items: flex-start;
+
+  justify-content: space-around;
+}
+
+div.contato-wrapper iframe,
+div.contato-wrapper img
+ {
+  border-radius: 10px;
+}
+
+address#contato div.endereco-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+
+  gap: 10px;
+
+}
+
+div.endereco-wrapper p {
+  color: var(--green);
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+div.fone a {
+  font-weight: 400;
+  color: var(--green);
+
+}
+
+contato-rapido-whatsapp {
+  display: flex;
+  flex-flow: row ;
+}
