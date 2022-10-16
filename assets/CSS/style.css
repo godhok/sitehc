@@ -124,7 +124,6 @@ div.contato-rapido-whatsapp svg,
 div.contato-rapido-ligar svg {
   width: 25px;
   height: 25px;
-  margin: 10px 5px 10px 0;
 
   fill: var(--green);
 }
@@ -133,6 +132,9 @@ a.contato-rapido-whatsapp-link,
 a.contato-rapido-ligar-link {
   display: flex;
   flex-direction: row;
+
+  align-items: center;
+  gap: 5px;
 }
 
 div.convenio-container div.subtitle-wrapper h4 {
@@ -460,13 +462,11 @@ address#contato {
 
   display: flex;
   flex-flow: column nowrap;
-
-  margin-bottom: 20px;
-  margin
+  font-style: normal;
 }
 
 address#contato div.contato-wrapper {
-  padding-block: 20px;
+  padding-block: 60px;
   
   display: flex;
   flex-direction: row wrap;
@@ -481,11 +481,24 @@ div.contato-wrapper img
   border-radius: 10px;
 }
 
+address#contato div.fone-endereco {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
 address#contato div.endereco-wrapper {
   display: flex;
   flex-flow: column wrap;
 
   gap: 10px;
+
+}
+
+div.fone {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
 }
 
@@ -495,6 +508,7 @@ div.endereco-wrapper p {
   line-height: 28px;
   font-weight: 500;
   letter-spacing: 1px;
+
 }
 
 div.fone a {
@@ -503,7 +517,30 @@ div.fone a {
 
 }
 
-contato-rapido-whatsapp {
+address#contato a.contato-rapido-whatsapp-link,
+address#contato a.contato-rapido-ligar-link {
   display: flex;
-  flex-flow: row ;
+  flex-wrap: nowrap;
+  align-items: center;
+  
 }
+
+/*FOOTER*/
+
+footer#rodape {
+  padding-top: 60px;
+  background-color: var(--paragraph);
+
+  display: flex;
+  justify-content: center;
+}
+footer#rodape div.rodape-container {
+  width: 960px;
+  max-width: 80%;
+
+  display: flex;
+  flex-flow: row wrap;
+  
+}
+
+
