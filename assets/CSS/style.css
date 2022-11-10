@@ -342,6 +342,16 @@ section#exames div.exames-wrapper {
   padding-inline: 60px;
 }
 
+section#exames div.exames-card {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+
+  width: 250px;
+  height: 265px;
+  text-align: center;
+}
+
 section#exames div.exames-card img {
   box-shadow: 1px 2px 6px 0 var(--hover);
 }
@@ -413,6 +423,7 @@ div.convenio-container div.convenio-title-container {
 div.convenio-title-container div.bar-wrapper {
   display: flex;
   width: 20%;
+  max-width:max-content;
 
   justify-content: center;
   align-items: center;
@@ -426,7 +437,8 @@ div.bar-wrapper div.bar {
 }
 
 div.convenio-title-container div.title-wrapper {
-  width: 60%;
+  width: 300px;
+  min-width: 40%;
 
   display: flex;
   align-items: center;
@@ -436,6 +448,7 @@ div.convenio-title-container div.title-wrapper {
 
 
 div.convenio-title-container h3 {
+  
   font-family: 'Fira Code', monospace;
   font-size: 36px;
   font-weight: 700;
