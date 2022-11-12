@@ -387,7 +387,6 @@ section#convenio {
   margin-bottom: 60px;
 }
 
-
 /*fazer uma media querie*/
 section#convenio div.convenio-container {
   width: 940px;
@@ -423,7 +422,7 @@ div.convenio-container div.convenio-title-container {
 div.convenio-title-container div.bar-wrapper {
   display: flex;
   width: 20%;
-  max-width:max-content;
+  flex-grow: 1;
 
   justify-content: center;
   align-items: center;
@@ -484,7 +483,7 @@ address#contato div.contato-wrapper {
   display: flex;
   flex-direction: row wrap;
   align-items: flex-start;
-
+  gap: 4%;
   justify-content: space-around;
 }
 
