@@ -338,8 +338,14 @@ section#exames div.exames-wrapper {
   align-items: center;
   justify-content: space-evenly;
   gap: 60px;
-  margin-block: 40px 20px;
+  padding-block: 40px 20px;
   padding-inline: 60px;
+}
+
+@media screen and (max-width: 990px) {
+  section#exames div.exames-wrapper {
+    padding-inline: 30%;
+  }
 }
 
 section#exames div.exames-card {
@@ -378,7 +384,7 @@ footer.agendar div.agendar-wrapper {
     url(../IMAGENS/opção1-original.png);
     background-size: auto, cover;
     background-attachment: scroll, fixed;
-    background-position: 0px 0px, 50% 50%;j
+    background-position: 0px 0px, 50% 50%;
 }
 
 /*Convênios*/
@@ -481,7 +487,7 @@ address#contato div.contato-wrapper {
   padding-block: 60px;
   
   display: flex;
-  flex-direction: row wrap;
+  flex-direction: row;
   align-items: flex-start;
   gap: 4%;
   justify-content: space-around;
@@ -499,12 +505,16 @@ address#contato div.fone-endereco {
   gap: 45px;
 }
 
-address#contato div.endereco-wrapper {
-  display: flex;
-  flex-flow: column wrap;
-
-  gap: 10px;
-
+@media screen and (max-width: 867px) {
+  address#contato div.contato-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-around;
+  }
+  address#contato div.fone-endereco img {
+    display: none;
+  }
 }
 
 div.fone {
